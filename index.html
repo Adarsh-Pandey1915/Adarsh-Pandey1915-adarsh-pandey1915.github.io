@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Adarsh Pandey | Data Science Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #0f172a;
+  --card: rgba(255,255,255,0.08);
+  --accent: #38bdf8;
+  --text: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(120deg, #020617, #0f172a);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(2,6,23,0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  z-index: 1000;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* SECTIONS */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 120px 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding-top: 160px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero span {
+  color: var(--accent);
+}
+
+.hero p {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* CARDS */
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 25px;
+  backdrop-filter: blur(12px);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(56,189,248,0.15);
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: rgba(56,189,248,0.15);
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* LINKS */
+a {
+  color: var(--accent);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  opacity: 0.6;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+  <h1>Adarsh <span>Pandey</span></h1>
+  <p>BSc Data Science • IIT Madras • Mathematics Enthusiast</p>
+</section>
+
+<section id="about">
+  <div class="card">
+    <h2>About Me</h2>
+    <p style="margin-top:15px">
+      I am currently pursuing a <strong>BSc in Data Science & Applications</strong> from
+      <strong>IIT Madras</strong>. I transitioned into data science after completing a
+      <strong>Diploma in Mechanical Engineering</strong> from Government Polytechnic Lucknow.
+      My core strengths lie in mathematics, statistics, and analytical problem-solving.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 style="margin-bottom:20px">Technical Skills</h2>
+  <div class="card">
+    <div class="skills">
+      <span class="skill">Python</span>
+      <span class="skill">Java</span>
+      <span class="skill">Statistics</span>
+      <span class="skill">Linear Algebra</span>
+      <span class="skill">Probability</span>
+      <span class="skill">Machine Learning</span>
+      <span class="skill">Data Analysis</span>
+      <span class="skill">Regression Models</span>
+      <span class="skill">Mechanical Engineering Fundamentals</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 style="margin-bottom:20px">Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Exploratory Data Analysis</h3>
+      <p style="margin-top:10px">
+        Performed statistical analysis and visualization on real-world datasets using Python.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Machine Learning Models</h3>
+      <p style="margin-top:10px">
+        Implemented regression models, evaluated performance, and interpreted results.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 style="margin-bottom:20px">Contact</h2>
+  <div class="card">
+    <p>Email: <a href="mailto:pandeyadarsh0013@gmail.com">pandeyadarsh0013@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/adarshs-pandey-192003sa/" target="_blank" rel="noopener noreferrer">
+  LinkedIn Profile
+</a>
+</p>
+    <p>GitHub: <a href="https://github.com/Adarsh-Pandey1915" target="_blank">GitHub</a></p>
+    <p>Blog: <a href="https://medium.com/@pandeyadarsh1915_71869" target="_blank">Medium</a></p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Adarsh Pandey
+</footer>
+
+</body>
+</html>
